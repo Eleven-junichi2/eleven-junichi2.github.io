@@ -1,0 +1,47 @@
+@font-face {
+    font-family: "IPAexGothic";
+    src: url(../fonts/ipaexg.ttf)
+}
+
+@font-face {
+    font-family: "IPAexMincho";
+    src: url(../fonts/ipaexm.ttf)
+}
+
+body, nav, h1, a, p, small{
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: #E8EFFC;
+}
+
+.grid {
+    display: grid;
+    grid-column-gap: 24px;
+    grid-row-gap: 24px;
+    grid-template-columns: 168px 168px 168px;
+    grid-template-rows: 168px 168px 168px;
+}
+
+.common-box {
+    font-family: "IPAexGothic";
+    color: #FFFFFF;
+    background-color: #6495ED;
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.66);
+    border: 1px solid #4881EA;
+    border-radius: 6px;
+    /* display: inherit; */
+}
+
+.common-box:active {
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.66) inset;
+}
+
+.empty-box {
+    background-color: #FFFFFF;
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.66);
+    border: 1px solid #4881EA;
+    border-radius: 6px;
+}
