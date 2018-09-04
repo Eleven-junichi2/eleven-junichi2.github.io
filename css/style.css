@@ -26,11 +26,42 @@ body {
     border-radius: 6px;
 }
 
+.common-link-button h1 {
+    font-size: 40px;
+}
+
+.common-link-button p {
+    font-size: 24px;
+}
+
+.common-link-button small {
+    font-size: 16px;
+}
+
 .common-link-button:active {
     box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.66) inset;
 }
 
+.grid {
+    display: grid;
+    grid-row-gap: 24px;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+}
+
+.title {
+    grid-row: 1 / 2;
+    justify-self: center;
+    font-family: "IPAexGothic";
+    color: #76A0EF;
+    text-shadow: 0 0 4px rgba(0, 0, 0, 0.22);
+    font-size: 32px;
+    display: grid;
+}
+
 .grid .grid {
+    grid-row: 2 / 3;
+    justify-self: center;
     display: grid;
     grid-column-gap: 24px;
     grid-row-gap: 24px;
@@ -62,14 +93,3 @@ body {
     grid-column: 2 / 3;
     grid-row: 3 / 4;  
 }
-
-/*
-
-
-
-.empty-box {
-    background-color: #FFFFFF;
-    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.66);
-    border: 1px solid #4881EA;
-    border-radius: 6px;
-} */
