@@ -8,6 +8,12 @@
     src: url(../fonts/ipaexm.ttf)
 }
 
+@keyframes content-load {
+    from {
+        transform: scaleX(-1);
+    }
+}
+
 html {
     font-size: calc(4px + 0.25vw);
 }
@@ -17,7 +23,7 @@ a {
     color: unset;
 }
 
-body, h1, h2, a, p, small{
+body, h1, h2, a, p, ul, li, small{
     padding: 0;
     margin: 0;
 }
@@ -54,8 +60,8 @@ body {
 }
 
 .common-content-box {
-    font-family: "IPAexGothic";
-    color: #FFFFFF;
+    animation-name: content-load;
+    animation-duration: 0.78s;
     background-color: #FFFFFF;
     box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.66);
     border: 1px solid #4881EA;
@@ -154,7 +160,6 @@ body {
     grid-column: 1 / 2;
     grid-template-rows: 2 / 3;
     display: grid;
-    /* grid-row-gap: 24px; */
     grid-row-gap: calc(12px + 1.52vh);
     grid-template-columns: 24px auto;
     grid-template-rows: 48px auto;
@@ -179,4 +184,80 @@ body {
 
 .who-am-i .grid p {
     margin-bottom: calc(12px + 0.76vh);
+}
+
+#accounts.grid {
+    background-color: #E8EFFC;
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.66) inset;
+    margin-top: calc(12px + 0.76vh);
+    margin-bottom: calc(12px + 0.76vh);
+    padding-left: calc(48px + 3.03vw);
+    padding-right: calc(48px + 3.03vw);
+    padding-top: calc(20px + 2.53vh);
+    padding-bottom: calc(48px + 6.09vh);
+    justify-self: center;
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    display: grid;
+    grid-column-gap: calc(12px + 0.76vw);
+    grid-row-gap: calc(12px + 1.52vh);
+    grid-template-columns: calc(276px + 17.43vw);
+    grid-template-rows: calc(20px + 2.53vh) calc(276px + 35.02vh);
+}
+
+#accounts .title {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+}
+
+.accounts {
+    padding-top: calc(12px + 0.76vh);
+    padding-right: calc(12px + 0.76vw);
+    grid-column: 1 / 2;
+    grid-template-rows: 2 / 3;
+    display: grid;
+    grid-row-gap: calc(12px + 1.52vh);
+    grid-template-columns: 24px auto;
+    grid-template-rows: 48px auto;
+}
+
+.accounts h1 {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    font-family: "IPAexGothic";
+    color: #76A0EF;
+    font-size: 6rem;
+    text-decoration-line: underline;
+}
+
+.accounts ul {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    font-family: "IPAexMincho";
+    color: #000000;
+    font-size: 3rem;
+}
+
+.accounts ul {
+    list-style-position: inside;
+    list-style-type: none;
+    display: inline-grid;
+    grid-auto-flow: column;
+    justify-items: center;
+}
+
+.accounts ul a {
+    margin-bottom: calc(12px + 0.76vh);
+    font-family: "IPAexGothic";
+    color: #6495ed;
+    font-size: 3rem;
+    display: inline-grid;
+}
+
+.accounts ul a span.qiita-icon.fa-stack {
+    color: #6495ed;
+}
+
+.accounts ul a span.qiita-icon .fa-search {
+    color: #FFFFFF;
 }
