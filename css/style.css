@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400&subset=japanese');
 
 /* Reset css */
-h1, a, body {
+a, body, h1, nav, ul, li {
     margin: 0;
     padding: 0;
 }
@@ -134,8 +134,29 @@ header nav a:active {
     grid-row: 3 / 4;
 }
     
-.skills {
+#skills {
     grid-row: 4 / 5;
-    border-radius: 4px;
-    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.65);
+}
+
+#skills ul {
+    /* justify-self: center; */
+    /* list-style-position: inside; */
+    margin-top: 10px;
+    list-style-type: none;
+    color: #FFFFFF;
+    font-size: 24px;
+    text-align: center;
+    text-shadow: 0 2px 3px rgba(0, 0, 0, 0.65);
+}
+
+.skill-python {
+    background-color: #6495ED;
+}
+
+.skill-html-css {
+    background-color: #edb895;
+}
+
+.skill-kotlin {
+    background-color: #ED6495;
 }
