@@ -151,18 +151,19 @@ header nav a:active {
     list-style-type: none;
     color: #FFFFFF;
     font-size: 24px;
-    text-align: center;
-    text-shadow: 0 2px 3px rgba(0, 0, 0, 0.65);
+    display: grid;
+    justify-items: center;
+    grid-row-gap: 10px;
 }
 
 .skill-python {
-    background-color: #6495ED;
+    background-color: #607D8B;
 }
 
 .skill-html-css {
-    background-color: #edb895;
+    background-color: #6495ED;
 }
 
 .skill-kotlin {
-    background-color: #ED6495;
+    background-color: #DE6495;
 }
