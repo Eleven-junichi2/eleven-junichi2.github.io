@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
-  <loc>https://eleven-junichi2.github.io/</loc>
+  <loc>//eleven-junichi2.github.io/</loc>
   <priority>1.0</priority>
   <lastmod>2018-10-03T14:26:57+09:00</lastmod>
 </url>
