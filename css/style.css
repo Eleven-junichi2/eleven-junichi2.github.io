@@ -161,6 +161,36 @@ header nav a.btn:hover {
 
 #my-works {
     grid-row: 3 / 4;
+    display: grid;
+    justify-content: center; 
+}
+
+#my-works .makodedit {
+    color: #FFFFFF;
+    margin-top: 10px;
+    margin-bottom: 40px;
+    padding: 5px;
+    background-color: #2E2E2E;
+    display: grid;
+    justify-items: center; 
+    grid-template-rows: auto auto auto;
+}
+
+@keyframes to-front-on-z {
+    to {
+        transform: translateY(11px);
+        box-shadow: 0 -11px 78px rgba(0, 0, 0, 0.65)
+    }
+}
+
+#my-works .makodedit:hover {
+    animation-name: to-front-on-z;
+    animation-fill-mode: forwards;
+    animation-duration: 1s;
+}
+
+#my-works .makodedit img {
+    margin-top: 10px;
 }
     
 #skills {
