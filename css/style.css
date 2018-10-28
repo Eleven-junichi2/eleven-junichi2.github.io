@@ -162,17 +162,29 @@ header nav a.btn:hover {
 #my-works {
     grid-row: 3 / 4;
     display: grid;
+    grid-template-rows: auto auto;
     justify-content: center; 
 }
 
-#my-works .makodedit {
+#my-works h1 {
+    grid-row: 1 / 2;
+}
+
+#my-works .my-works {
+    grid-row: 2 / 3;
+    display: flex;
+    justify-content: space-around;
+}
+
+#my-works .my-works .my-work {
     color: #FFFFFF;
     margin-top: 10px;
     margin-bottom: 40px;
     padding: 5px;
+    margin: 5px;
     background-color: #2E2E2E;
     display: grid;
-    justify-items: center; 
+    justify-items: center;
     grid-template-rows: auto auto auto auto;
 }
 
@@ -183,15 +195,15 @@ header nav a.btn:hover {
     }
 }
 
-#my-works .makodedit:hover {
+#my-works .my-works .my-work:hover {
     animation-name: to-front-on-z;
     animation-fill-mode: forwards;
     animation-duration: 1s;
 }
 
-#my-works .makodedit img {
+#my-works .my-works .my-work img {
     margin-top: 10px;
-    width: 80%;
+    width: 80%
 }
     
 #skills {
@@ -217,4 +229,12 @@ header nav a.btn:hover {
 
 #skills ul li:hover {
     border: 3px solid rgba(0, 0, 0, 0.65);
+}
+
+@media screen and (max-width: 400px) {
+    #my-works .my-works {
+        grid-row: 2 / 3;
+        display: flex;
+        flex-flow: column;
+    }
 }
