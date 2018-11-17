@@ -15,10 +15,10 @@ a {
 body {
     margin: 10px;
     background-color: #464646;
-    /* background-image: url(../images/icamera.png);
+    background-image: url("../images/dark_soflitica.png");
     background-position: center;
     background-attachment: fixed;
-    background-size: cover;*/
+    background-size: cover;
     display: grid;
     grid-row-gap: 20px;
     grid-template-columns: minmax(min-content, auto);
@@ -27,6 +27,8 @@ body {
 }
 
 header {
+    background-color: #D7DCC7;
+    opacity: 0.9;
     grid-row: 1 / 2;
     border-radius: 4px;
     box-shadow: 0 2px 3px rgba(0, 0, 0, 0.65);
@@ -83,6 +85,7 @@ header {
 
 .content-box {
     background-color: #D7DCC7;
+    opacity: 0.9;
     border-radius: 4px;
     box-shadow: 0 2px 3px rgba(0, 0, 0, 0.65);
     h1 {
