@@ -5,75 +5,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Eleven-junichi2 - I do for my life</title>
+    <title>eleven-junichi2 - I do for my life</title>
     <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/brands.css" integrity="sha384-rf1bqOAj3+pw6NqYrtaE1/4Se2NBwkIfeYbsFdtiR6TQz0acWiwJbv1IM/Nt/ite"
-        crossorigin="anonymous">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/fontawesome.css" integrity="sha384-1rquJLNOM3ijoueaaeS5m+McXPJCGdr5HcA03/VHXxcp2kX2sUrQDmFc3jR5i/C7"
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
         crossorigin="anonymous">
 </head>
 
 <body>
     <header>
-        <h1>Eleven-junichi2</h1>
-        <img class="my-profile-img" src="./images/myprofimg.svg" alt="Eleven-junichi2">
-        <!-- <img class="my-profile-img" src="./images/myprofimg_dark.svg" alt="Eleven-junichi2"> -->
-        <nav>
-            <a class="btn" href="#who-am-i">Who am i</a>
-            <a class="btn" href="#my-works">My Works</a>
-            <a class="btn" href="#skills">Skils</a>
-        </nav>
+        <h1>eleven-junichi2</h1>
+        <p class="welcome-message">Welcome my website.</p>
+        <img class="my-profile-img" src="images/myprofimg.svg">
     </header>
-    <div id="who-am-i" class="content-box">
-        <h1>Who am I</h1>
-        <div class="account-list">
-            <a class="link-box btn" href="https://github.com/eleven-junichi2">
-                <i class="fab fa-github fa-3x link-to-github"></i>
-            </a>
-            <a class="link-box btn" href="https://bitbucket.org/eleven-junichi2">
-                <i class="fab fa-bitbucket fa-3x link-to-bitbucket"></i>
-            </a>
-            <a class="link-box btn" href="https://qiita.com/eleven-junichi2">
-                <i class="fab link-to-qiita">Qiita</i>
-            </a>
-        </div>
-    </div>
-    <div id="my-works" class="content-box">
-        <h1>My Works</h1>
-        <div class="my-works">
-            <div class="my-work content-box">
-                <h2>Makodedit</h2>
-                <p>A Text editor.</p>
-                <small>It has The Simple UI & Syntax Highlight(Python).</small>
-                <img src="./images/makodedit_SS.png" alt="Makodedit">
-                <div>
-                    <p>It's repository:</p>
-                    <a class="link-box btn" href="https://github.com/Eleven-junichi2/mamo">
-                        <i class="fab fa-github fa-3x link-to-github"></i>
-                    </a>
-                </div>
+
+    <main>
+        <nav class="main-nav">
+            <ul>
+                <li><a class="btn" href="#about-me">About me</a></li>
+                <li><a class="btn" href="#my-works">My works</a></li>
+            </ul>
+        </nav>
+        <div class="main-contents">
+            <div id="about-me">
+                <h1>About me</h1>
+                <ul class="link-list">
+                    <li class="btn"><a href="https://github.com/Eleven-junichi2">&rarr; Github</a></li>
+                    <li class="btn"><a href="https://qiita.com/eleven-junichi2">&rarr; Qiita</a></li>
+                </ul>
             </div>
-            <div class="my-work content-box">
-                <h2>Onetodu</h2>
-                <p>A very simple ToDo list application.</p>
-                <img src="./images/onetodu_SS.png" alt="Makodedit">
-                <div>
-                    <p>It's repository:</p>
-                    <a class="link-box btn" href="https://github.com/Eleven-junichi2/onetodu">
-                        <i class="fab fa-github fa-3x link-to-github"></i>
-                    </a>
-                </div>
+            <div id="my-works">
+                <h1>My works</h1>
+                <ul class="link-list">
+                    <h2>Application</h2>
+                    <li class="btn"><a href="https://github.com/Eleven-junichi2/makodedit">&rarr; Makodedit</a></li>
+                    <li class="btn"><a href="https://github.com/Eleven-junichi2/onetodu">&rarr; Onetodu</a></li>
+                    <li class="btn"><a href="https://github.com/Eleven-junichi2/tsukushi">&rarr; Tsukushi</a></li>
+                </ul>
+                <ul class="link-list">
+                    <h2>Artwork</h2>
+                    <li class="btn">
+                        <a href="https://github.com/Eleven-junichi2/qpdb_wallpaper">&rarr; qpdb</a>
+                    </li>
+                </ul>
             </div>
         </div>
-    </div>
-    <div id="skills" class="content-box">
-        <h1>Skills</h1>
-        <ul>
-            <li>Python</li>
-            <li>HTML/CSS</li>
-            <li>Kotlin</li>
-        </ul>
-    </div>
+    </main>
 </body>
 
 </html>
