@@ -1,10 +1,12 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto:100,200,300&subset=japanese");
 
 $color_background: #2E2E2E;
-$color_foreground: #D1D1D1;
-$color_primary: #3C646A;
-$color_secondary: #25A888;
-$color_text_background: #B2B2B0;
+$color_foreground: #E8E8E8;
+$color_primary: #DCDCC7;
+$color_secondary: #CBCBB6;
+$color_text_light: #EDEDD8;
+$color_text_dark: #2E2E2E;
+$color_text_bg_light: #CBCBB6;
 /* Reset css */
 a, body, h1, nav, ul, li {
     margin: 0;
@@ -19,18 +21,24 @@ a {
 /* --- */
 
 .btn {
-    background-color: $color_secondary;
-    color: $color_foreground;
+    font-size: 22px;
     margin-left: 5.5px;
     margin-right: 5.5px;
     transition: all 250ms 0s ease;
+    border-radius: 2px;
+    color: $color_text_dark;
+    background-color: $color_text_bg_light;
+    border: 1px darken($color_text_bg_light, 22%) solid;
+    border-bottom: 3px darken($color_text_bg_light, 22%) solid;
+    a {
+        display: block;
+    }
+    &:hover {
+        transform: translateY(-5.5px);
+        box-shadow: 0 5.5px 22px rgba(0, 0, 0, 0.50);
+    }
 }
 
-.btn:hover {
-    background-color: darken($color_secondary, 10%);
-    color: darken($color_foreground, 10%);
-    box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.65);
-}
 
 .link-list {
     display: flex;
@@ -41,9 +49,6 @@ a {
         margin-left: 5.5px;
         margin-right: 5.5px;
         margin-bottom: 22px;
-        font-size: 22px;
-        color: darken($color_primary, 10%);
-        background-color: $color_text_background;
         a {
             display: inline-block;
             padding: 5.5px;
@@ -58,74 +63,46 @@ body {
     background-color: $color_background;
     font-family: Roboto;
     header {
-        color: $color_foreground;
         display: flex;
         flex-direction: column;
-        align-items: center;
-        margin-top: 44px;
-        margin-bottom: 44px;
-        h1 {
-            font-weight: 300;
-            font-size: 78px;
-            text-align: center;
-            margin-bottom: 11px;
-            text-shadow: 0 -2px 1px rgba(0, 0, 0, 0.65);
-        }
-        @media (max-width:600px) {
-            h1 {
-                font-size: 39px;
-            }
-        }
-        .welcome-message {
-            position: relative;
-            display: inline-block;
-            margin: 11px 0;
-            padding: 7px 10px;
-            min-width: 120px;
-            max-width: 100%;
-            color: #555;
-            font-size: 16px;
-            background: $color_foreground;
-            border-radius: 11px;
-        }
-        .welcome-message::before {
-            content: "";
-            position: absolute;
-            top: 100%;
-            left: 50%;
-            margin-left: -15px;
-            border: 15px solid transparent;
-            border-top: 15px solid $color_foreground;
-        }
-        .my-profile-img {
-            margin-top: 11px;
-        }
-    }
-    main {
-        .main-nav {
-            background-color: $color_secondary;
-            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.65);
-            color: $color_foreground;
-            font-size: 22px;
+        align-content: center;
+        .welcome-content-wrap {
             display: flex;
             flex-direction: column;
-            align-items: center;
-            ul {
+            height: 90vh;
+            justify-content: center;
+            .welcome-content {
                 display: flex;
+                flex-direction: column;
+                color: $color_text_light;
                 align-items: center;
-                list-style: none;
-                li {
-                    margin-left: 5.5px;
-                    margin-right: 5.5px;
-                    a {
-                        display: inline-block;
-                        padding: 11px;
-                    }
+                // margin-top: 44px;
+                // margin-bottom: 44px;
+                
+                h1 {
+                    font-weight: 300;
+                    font-size: 78px;
+                    text-align: center;
+                    // margin-bottom: 11px;
+                    text-shadow: 0 -2px 1px rgba(0, 0, 0, 0.65);
+                }
+                .my-profile-img {
+                    margin-top: 11px;
                 }
             }
         }
+        nav {
+            background-color: $color_text_bg_light;
+            
+            .btn {
+                display: inline-block;
+                padding: 11px;
+            }
+        }
+    }
+    main {
         background-color: $color_foreground;
-        color: $color_primary;
+        color: $color_text_dark;
         .main-contents {
             padding-bottom: 78px;
             display: flex;
@@ -133,19 +110,19 @@ body {
             align-items: center;
             h1 {
                 font-size: 44px;
+                text-align: center;
+                margin-bottom: 44px;
+            }
+            h2 {
+                text-align: center;
+                font-size: 24px;
             }
             #about-me {
                 margin-top: 44px;
                 padding-bottom: 44px;
-                border-bottom: 1px solid $color_text_background;
                 h1 {
                     margin-bottom: 33px;
                 }
-            }
-            #my-works {
-                margin-top: 44px;
-                padding-bottom: 44px;
-                border-bottom: 1px solid $color_text_background;
             }
         }
     }
