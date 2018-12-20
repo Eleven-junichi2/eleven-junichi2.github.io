@@ -1,14 +1,9 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto:100,200,300&subset=japanese");
 
-$color_background: #2E2E2E;
-$color_foreground: #E8E8E8;
-$color_primary: #DCDCC7;
-$color_secondary: #CBCBB6;
-$color_text_light: #EDEDD8;
-$color_text_dark: #2E2E2E;
-$color_text_bg_light: #CBCBB6;
+$color_text: #2E2E2E;
+
 /* Reset css */
-a, body, h1, nav, ul, li {
+a, body, h1, i, nav, ul, li, div {
     margin: 0;
     padding: 0;
 }
@@ -21,108 +16,136 @@ a {
 /* --- */
 
 .btn {
-    font-size: 22px;
-    margin-left: 5.5px;
-    margin-right: 5.5px;
-    transition: all 250ms 0s ease;
+    display: block;
+    background-color: #E8E8E8;
     border-radius: 2px;
-    color: $color_text_dark;
-    background-color: $color_text_bg_light;
-    border: 1px darken($color_text_bg_light, 22%) solid;
-    border-bottom: 3px darken($color_text_bg_light, 22%) solid;
-    a {
-        display: block;
-    }
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.65);
+    opacity: 0.78;
+    transition: all 600ms 100ms ease-out;
     &:hover {
-        transform: translateY(-5.5px);
-        box-shadow: 0 5.5px 22px rgba(0, 0, 0, 0.50);
-    }
-}
-
-
-.link-list {
-    display: flex;
-    flex-direction: column;
-    align-items: baseline;
-    list-style: none;
-    li {
-        margin-left: 5.5px;
-        margin-right: 5.5px;
-        margin-bottom: 22px;
-        a {
-            display: inline-block;
-            padding: 5.5px;
-        }
-    }
-    li:last-child {
-        margin-bottom: unset;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.78);
+    opacity: 0.89;
+    transform: translateY(-11px);
     }
 }
 
 body {
-    background-color: $color_background;
+    background-image: url("../images/dark_soflitica.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
     font-family: Roboto;
+    color: $color_text;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 10fr, auto;
     header {
-        display: flex;
-        flex-direction: column;
+        grid-row: 1 / 2;
+        display: grid;        
+        grid-template-columns: auto;
+        grid-template-rows: auto, auto;
+        grid-row-gap: 22px;
+        justify-items: center;
         align-content: center;
-        .welcome-content-wrap {
-            display: flex;
-            flex-direction: column;
-            height: 90vh;
-            justify-content: center;
-            .welcome-content {
-                display: flex;
-                flex-direction: column;
-                color: $color_text_light;
-                align-items: center;
-                // margin-top: 44px;
-                // margin-bottom: 44px;
-                
-                h1 {
-                    font-weight: 300;
-                    font-size: 78px;
-                    text-align: center;
-                    // margin-bottom: 11px;
-                    text-shadow: 0 -2px 1px rgba(0, 0, 0, 0.65);
-                }
-                .my-profile-img {
-                    margin-top: 11px;
-                }
+        h1 {
+            color: #E8E8E8;
+            font-size: 78px;
+            font-weight: 300;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.65);
+            text-align: center;
+            @media (max-width: 504px) {
+                font-size: 44px;                
             }
         }
+        img {
+            max-width: 100%;
+        }
         nav {
-            background-color: $color_text_bg_light;
-            
             .btn {
-                display: inline-block;
-                padding: 11px;
+                $btn_size: 55px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: $btn_size;
+                width: $btn_size;
+                border-radius: 44px;
+                transform: translateY($btn_size / 2.5);
             }
         }
     }
-    main {
-        background-color: $color_foreground;
-        color: $color_text_dark;
-        .main-contents {
-            padding-bottom: 78px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            h1 {
-                font-size: 44px;
+    #main {
+        grid-row: 2 / 3;
+        padding-top: 8vh;
+        padding-bottom: 44px;
+        padding-left: 22px;
+        padding-right: 22px;
+        background-color: #E8E8E8D7;
+        box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.65);
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto auto;
+        grid-row-gap: 22px;
+        #my-works {
+            justify-self: center;
+            display: grid;
+            grid-row-gap: 22px;
+            & > h1:first-child {
+                border-left: 11px solid #2E2E2E;
+                border-right: 11px solid #2E2E2E;
+                padding-left: 11px;
+                padding-right: 11px;
                 text-align: center;
-                margin-bottom: 44px;
+                box-shadow: 0 3px 4px rgba(0, 0, 0, 0.65);
+                font-size: 44px;
             }
             h2 {
+                border-left: 8px solid #2E2E2E;
+                border-right: 8px solid #2E2E2E;
+                padding-left: 6px;
+                padding-right: 6px;
+                font-size: 33px;
                 text-align: center;
-                font-size: 24px;
+                box-shadow: 0 1px 2px rgba(0, 0, 0, 0.78);
             }
-            #about-me {
-                margin-top: 44px;
-                padding-bottom: 44px;
-                h1 {
-                    margin-bottom: 33px;
+            .content {
+                h3 {
+                    font-size: 28px;
+                    text-align: center;
                 }
+            }
+            #my-wallpapers {
+                display: grid;
+                grid-template-columns: auto;
+                grid-template-rows: auto auto;
+                justify-items: center;
+                box-shadow: 0 1px 2px rgba(0, 0, 0, 0.65);
+                .content {
+                    & > h3:first-child {
+                        grid-row: 1 / 2;
+                        a {
+                            padding: 11px;
+                            border-radius: 2px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    footer {
+        display: grid;
+        justify-items: center;
+        align-content: center;
+        nav {
+            .btn {
+                $btn_size: 55px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: $btn_size;
+                width: $btn_size;
+                border-radius: 44px;
+                transform: translateY($btn_size / -2.5);
             }
         }
     }

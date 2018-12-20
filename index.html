@@ -7,49 +7,35 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>eleven-junichi2 - I do for my life</title>
     <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
-        crossorigin="anonymous">
+    <script defer src="https://use.fontawesome.com/releases/v5.6.1/js/all.js" integrity="sha384-R5JkiUweZpJjELPWqttAYmYM1P3SNEJRM6ecTQF05pFFtxmCO+Y1CiUhvuDzgSVZ"
+        crossorigin="anonymous"></script>
 </head>
 
 <body>
-    <header>
-        <h1>eleven-junichi2</h1>
-        <p class="welcome-message">Welcome my website.</p>
-        <img class="my-profile-img" src="images/myprofimg.svg">
-    </header>
-
-    <main>
-        <nav class="main-nav">
-            <ul>
-                <li><a class="btn" href="#about-me">About me</a></li>
-                <li><a class="btn" href="#my-works">My works</a></li>
-            </ul>
+    <header id="main-header">
+        <h1><a href="https://github.com/Eleven-junichi2">eleven-junichi2</a></h1>
+        <img src="./images/11-11-2-pavater.svg">
+        <nav>
+            <a href="#my-works" class="btn"><i class="fas fa-angle-down"></i></a>
         </nav>
-        <div class="main-contents">
-            <div id="about-me">
-                <h1>About me</h1>
-                <ul class="link-list">
-                    <li class="btn"><a href="https://github.com/Eleven-junichi2">&rarr; Github</a></li>
-                    <li class="btn"><a href="https://qiita.com/eleven-junichi2">&rarr; Qiita</a></li>
-                </ul>
-            </div>
-            <div id="my-works">
-                <h1>My works</h1>
-                <ul class="link-list">
-                    <h2>Application</h2>
-                    <li class="btn"><a href="https://github.com/Eleven-junichi2/makodedit">&rarr; Makodedit</a></li>
-                    <li class="btn"><a href="https://github.com/Eleven-junichi2/onetodu">&rarr; Onetodu</a></li>
-                    <li class="btn"><a href="https://github.com/Eleven-junichi2/tsukushi">&rarr; Tsukushi</a></li>
-                </ul>
-                <ul class="link-list">
-                    <h2>Artwork</h2>
-                    <li class="btn">
-                        <a href="https://github.com/Eleven-junichi2/qpdb_wallpaper">&rarr; qpdb</a>
-                    </li>
-                </ul>
+    </header>
+    <div id="main">
+        <div id="my-works">
+            <h1>My works</h1>
+            <div id="my-wallpapers">
+                <h2>Wallpapers</h2>
+                <small>for linux desktops.</small>
+                <div class="content">
+                    <h3><a class="btn" href="https://github.com/Eleven-junichi2/qpdb_wallpaper">qpdb</a></h3>
+                </div>
             </div>
         </div>
-    </main>
+    </div>
+    <footer>
+        <nav>
+            <a href="#main-header" class="btn"><i class="fas fa-angle-up"></i></a>
+        </nav>
+    </footer>
 </body>
 
 </html>
