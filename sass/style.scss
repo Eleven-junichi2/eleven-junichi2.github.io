@@ -126,7 +126,7 @@ body {
                     text-align: center;
                 }
             }
-            #my-wallpapers {
+            & > div {
                 display: grid;
                 grid-template-columns: auto;
                 grid-template-rows: auto auto;
