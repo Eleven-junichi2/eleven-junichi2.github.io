@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-@import"https://fonts.googleapis.com/css?family=Roboto:100,200,300&subset=japanese";a,body,h1,i,nav,ul,li,div{margin:0;padding:0}a{outline:none;text-decoration-line:none;color:unset}@keyframes popUp{0%{opacity:0;transform:scale(0.89, 0.89)}100%{transform:scale(1, 1);opacity:1}}.btn{display:block;background-color:#e8e8e8;border-radius:2px;box-shadow:0 2px 4px rgba(0,0,0,.65);opacity:.78;transition:all 600ms 100ms ease-out}.btn:hover{box-shadow:0 12px 24px rgba(0,0,0,.78);opacity:.89;transform:translateY(-11px)}body{background-image:url("../images/dark_soflitica.png");background-repeat:no-repeat;background-position:center;background-size:cover;background-attachment:fixed;font-family:Roboto;color:#2e2e2e;display:grid;grid-template-columns:auto;grid-template-rows:10fr auto}body header{grid-row:1/2;display:grid;grid-template-columns:auto;grid-template-rows:auto auto;grid-row-gap:22px;justify-items:center;align-content:center}body header h1{color:#e8e8e8;font-size:78px;font-weight:300;text-shadow:0 2px 4px rgba(0,0,0,.65);text-align:center}@media(max-width: 504px){body header h1{font-size:44px}}body header img{max-width:100%;animation:popUp 1s ease 0s 1 normal}body header nav .btn{display:flex;justify-content:center;align-items:center;height:55px;width:55px;border-radius:44px;transform:translateY(22px)}body main{grid-row:2/3;padding-top:8vh;padding-bottom:44px;padding-left:22px;padding-right:22px;background-color:rgba(232,232,232,.8431372549);box-shadow:0 -2px 4px rgba(0,0,0,.65);display:grid;grid-template-columns:auto;grid-template-rows:auto auto;grid-row-gap:22px}body main #my-works{justify-self:center;display:grid;grid-row-gap:22px}body main #my-works>h1:first-child{border-left:11px solid #2e2e2e;border-right:11px solid #2e2e2e;padding-left:11px;padding-right:11px;text-align:center;font-size:44px}body main #my-works h2{border-left:8px solid #2e2e2e;border-right:8px solid #2e2e2e;padding-left:6px;padding-right:6px;font-size:33px;text-align:center}body main #my-works .content h3{font-size:28px;text-align:center}body main #my-works>div{display:grid;grid-template-columns:auto;grid-template-rows:auto auto;justify-items:center;box-shadow:0 1px 2px rgba(0,0,0,.65)}body main #my-works>div .content>h3:first-child{grid-row:1/2}body main #my-works>div .content>h3:first-child a{padding:11px;border-radius:2px}body footer{display:grid;justify-items:center;align-content:center}body footer nav .btn{display:flex;justify-content:center;align-items:center;height:55px;width:55px;border-radius:44px;transform:translateY(-22px)}
-=======
-@import url("https://fonts.googleapis.com/css?family=Roboto:100,200,300&subset=japanese");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;700&family=Roboto:wght@300;400;700&display=swap");
 /* Reset css */
 a, body, h1, i, nav, ul, li, div {
   margin: 0;
@@ -47,17 +44,17 @@ body {
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
-  font-family: Roboto;
+  font-family: "Roboto", "Noto Sans JP", sans-serif;
   color: #2E2E2E;
   display: grid;
   grid-template-columns: auto;
-  grid-template-rows: 10fr, auto;
+  grid-template-rows: 10fr auto;
 }
 body header {
   grid-row: 1/2;
   display: grid;
   grid-template-columns: auto;
-  grid-template-rows: auto, auto;
+  grid-template-rows: auto auto;
   grid-row-gap: 22px;
   justify-items: center;
   align-content: center;
@@ -89,7 +86,10 @@ body header nav .btn {
   border-radius: 44px;
   transform: translateY(22px);
 }
-body #main {
+body header nav .btn:hover {
+  transform: translateY(22px);
+}
+body main {
   grid-row: 2/3;
   padding-top: 8vh;
   padding-bottom: 44px;
@@ -102,12 +102,12 @@ body #main {
   grid-template-rows: auto auto;
   grid-row-gap: 22px;
 }
-body #main .content-section {
+body main .content-section {
   justify-self: center;
   display: grid;
   grid-row-gap: 22px;
 }
-body #main .content-section > .section-title {
+body main .content-section > .section-title {
   border-left: 11px solid #2E2E2E;
   border-right: 11px solid #2E2E2E;
   padding-left: 11px;
@@ -115,7 +115,7 @@ body #main .content-section > .section-title {
   text-align: center;
   font-size: 44px;
 }
-body #main .content-section .section-subtitle {
+body main .content-section .section-subtitle {
   border-left: 8px solid #2E2E2E;
   border-right: 8px solid #2E2E2E;
   padding-left: 6px;
@@ -123,14 +123,14 @@ body #main .content-section .section-subtitle {
   font-size: 33px;
   text-align: center;
 }
-body #main .content-section .content h3 {
+body main .content-section .content h3 {
   font-size: 28px;
   text-align: center;
 }
-body #main .content-section .content p {
+body main .content-section .content p {
   text-align: center;
 }
-body #main .content-section > .section-card {
+body main .content-section > .section-card {
   display: grid;
   grid-template-columns: auto;
   grid-template-rows: auto auto;
@@ -139,57 +139,66 @@ body #main .content-section > .section-card {
   padding: 16px 8px;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.65);
 }
-body #main .content-section > .section-card .content > h3:first-child {
+body main .content-section > .section-card .content > h3:first-child {
   grid-row: 1/2;
 }
-body #main .content-section > .section-card .content > h3:first-child a {
+body main .content-section > .section-card .content > h3:first-child a {
   padding: 11px;
   border-radius: 2px;
 }
-body #main #my-skills .section-card {
+body main #my-skills .section-card {
   justify-items: stretch;
 }
-body #main #my-skills .section-card .skill-group {
+body main #my-skills .section-card .skill-group {
   display: grid;
   grid-row-gap: 8px;
   justify-items: center;
 }
-body #main #my-skills .section-card ul {
+body main #my-skills .section-card ul {
   list-style: none;
   display: grid;
   grid-row-gap: 8px;
   justify-items: center;
 }
-body #main #my-skills .section-card li {
+body main #my-skills .section-card li {
   font-size: 22px;
   text-align: center;
 }
-body #main #my-skills .section-card li .btn {
+body main #my-skills .section-card li .btn {
   padding: 2px 6px;
   transition: opacity 600ms 100ms ease-out, box-shadow 600ms 100ms ease-out;
 }
-body #main #my-skills .section-card li .btn:hover {
+body main #my-skills .section-card li .btn:hover {
   transform: none;
 }
-body #main #my-skills .section-card p {
+body main #my-skills .section-card p {
   justify-self: center;
   text-align: center;
 }
-body #main #my-skills .section-card .text-link {
+body main #my-skills .section-card .text-link {
   color: #24527A;
   text-decoration: underline;
   text-decoration-thickness: 1px;
   text-underline-offset: 0.16em;
   transition: color 200ms ease-out, opacity 200ms ease-out;
 }
-body #main #my-skills .section-card .text-link:hover {
+body main #my-skills .section-card .text-link:hover {
   color: #16344D;
   opacity: 0.9;
 }
 body footer {
   display: grid;
+  grid-row-gap: 10px;
   justify-items: center;
   align-content: center;
+  padding: 18px 22px 24px;
+  background-color: rgba(232, 232, 232, 0.9);
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.35);
+}
+body footer small {
+  color: #1F1F1F;
+  font-size: 15px;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.45);
 }
 body footer nav .btn {
   display: flex;
@@ -202,6 +211,8 @@ body footer nav .btn {
   border-radius: 44px;
   transform: translateY(-22px);
 }
+body footer nav .btn:hover {
+  transform: translateY(-22px);
+}
 
 /*# sourceMappingURL=style.css.map */
->>>>>>> 76dd4b7 (スタイルシートのリファクタリングとHTML構造の改善、コンテンツの追加)

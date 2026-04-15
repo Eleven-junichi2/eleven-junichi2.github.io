@@ -1,5 +1,5 @@
 @use "sass:math";
-@import url("https://fonts.googleapis.com/css?family=Roboto:100,200,300&subset=japanese");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;700&family=Roboto:wght@300;400;700&display=swap");
 
 $color_text: #2E2E2E;
 
@@ -49,7 +49,7 @@ body {
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
-    font-family: Roboto;
+    font-family: "Roboto", "Noto Sans JP", sans-serif;
     color: $color_text;
     display: grid;
     grid-template-columns: auto;
@@ -87,11 +87,10 @@ body {
                 height: $btn_size;
                 width: $btn_size;
                 border-radius: 44px;
-<<<<<<< HEAD
-                transform: translateY(calc($btn_size / 2.5));
-=======
                 transform: translateY(math.div($btn_size, 2.5));
->>>>>>> 76dd4b7 (スタイルシートのリファクタリングとHTML構造の改善、コンテンツの追加)
+                &:hover {
+                    transform: translateY(math.div($btn_size, 2.5));
+                }
             }
         }
     }
@@ -200,8 +199,17 @@ body {
     }
     footer {
         display: grid;
+        grid-row-gap: 10px;
         justify-items: center;
         align-content: center;
+        padding: 18px 22px 24px;
+        background-color: rgba(232, 232, 232, 0.9);
+        box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.35);
+        small {
+            color: #1F1F1F;
+            font-size: 15px;
+            text-shadow: 0 1px 1px rgba(255, 255, 255, 0.45);
+        }
         nav {
             .btn {
                 $btn_size: 55px;
@@ -213,11 +221,10 @@ body {
                 height: $btn_size;
                 width: $btn_size;
                 border-radius: 44px;
-<<<<<<< HEAD
-                transform: translateY(calc($btn_size / -2.5));
-=======
                 transform: translateY(math.div($btn_size, -2.5));
->>>>>>> 76dd4b7 (スタイルシートのリファクタリングとHTML構造の改善、コンテンツの追加)
+                &:hover {
+                    transform: translateY(math.div($btn_size, -2.5));
+                }
             }
         }
     }
