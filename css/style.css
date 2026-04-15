@@ -154,6 +154,9 @@ body main #my-skills .section-card .skill-group {
   grid-row-gap: 8px;
   justify-items: center;
 }
+body main #my-skills .section-card .section-subtitle {
+  justify-self: center;
+}
 body main #my-skills .section-card ul {
   list-style: none;
   display: grid;
