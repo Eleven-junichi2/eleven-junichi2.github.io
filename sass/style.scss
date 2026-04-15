@@ -1,3 +1,4 @@
+@use "sass:math";
 @import url("https://fonts.googleapis.com/css?family=Roboto:100,200,300&subset=japanese");
 
 $color_text: #2E2E2E;
@@ -31,6 +32,8 @@ a {
     background-color: #E8E8E8;
     border-radius: 2px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.65);
+    margin-left: 2px;
+    margin-right: 2px;
     opacity: 0.78;
     transition: all 600ms 100ms ease-out;
     &:hover {
@@ -77,12 +80,18 @@ body {
             .btn {
                 $btn_size: 55px;
                 display: flex;
+                margin-left: 0;
+                margin-right: 0;
                 justify-content: center;
                 align-items: center;
                 height: $btn_size;
                 width: $btn_size;
                 border-radius: 44px;
+<<<<<<< HEAD
                 transform: translateY(calc($btn_size / 2.5));
+=======
+                transform: translateY(math.div($btn_size, 2.5));
+>>>>>>> 76dd4b7 (スタイルシートのリファクタリングとHTML構造の改善、コンテンツの追加)
             }
         }
     }
@@ -98,11 +107,11 @@ body {
         grid-template-columns: auto;
         grid-template-rows: auto auto;
         grid-row-gap: 22px;
-        #my-works {
+        .content-section {
             justify-self: center;
             display: grid;
             grid-row-gap: 22px;
-            & > h1:first-child {
+            & > .section-title {
                 border-left: 11px solid #2E2E2E;
                 border-right: 11px solid #2E2E2E;
                 padding-left: 11px;
@@ -110,7 +119,7 @@ body {
                 text-align: center;
                 font-size: 44px;
             }
-            h2 {
+            .section-subtitle {
                 border-left: 8px solid #2E2E2E;
                 border-right: 8px solid #2E2E2E;
                 padding-left: 6px;
@@ -123,12 +132,17 @@ body {
                     font-size: 28px;
                     text-align: center;
                 }
+                p {
+                    text-align: center;
+                }
             }
-            & > div {
+            & > .section-card {
                 display: grid;
                 grid-template-columns: auto;
                 grid-template-rows: auto auto;
                 justify-items: center;
+                grid-row-gap: 16px;
+                padding: 16px 8px;
                 box-shadow: 0 1px 2px rgba(0, 0, 0, 0.65);
                 .content {
                     & > h3:first-child {
@@ -137,6 +151,48 @@ body {
                             padding: 11px;
                             border-radius: 2px;
                         }
+                    }
+                }
+            }
+        }
+        #my-skills {
+            .section-card {
+                justify-items: stretch;
+                .skill-group {
+                    display: grid;
+                    grid-row-gap: 8px;
+                    justify-items: center;
+                }
+                ul {
+                    list-style: none;
+                    display: grid;
+                    grid-row-gap: 8px;
+                    justify-items: center;
+                }
+                li {
+                    font-size: 22px;
+                    text-align: center;
+                }
+                li .btn {
+                    padding: 2px 6px;
+                    transition: opacity 600ms 100ms ease-out, box-shadow 600ms 100ms ease-out;
+                    &:hover {
+                        transform: none;
+                    }
+                }
+                p {
+                    justify-self: center;
+                    text-align: center;
+                }
+                .text-link {
+                    color: #24527A;
+                    text-decoration: underline;
+                    text-decoration-thickness: 1px;
+                    text-underline-offset: 0.16em;
+                    transition: color 200ms ease-out, opacity 200ms ease-out;
+                    &:hover {
+                        color: #16344D;
+                        opacity: 0.9;
                     }
                 }
             }
@@ -150,12 +206,18 @@ body {
             .btn {
                 $btn_size: 55px;
                 display: flex;
+                margin-left: 0;
+                margin-right: 0;
                 justify-content: center;
                 align-items: center;
                 height: $btn_size;
                 width: $btn_size;
                 border-radius: 44px;
+<<<<<<< HEAD
                 transform: translateY(calc($btn_size / -2.5));
+=======
+                transform: translateY(math.div($btn_size, -2.5));
+>>>>>>> 76dd4b7 (スタイルシートのリファクタリングとHTML構造の改善、コンテンツの追加)
             }
         }
     }
